@@ -1,0 +1,38 @@
+<div class="container pt-5">
+  
+<div class="row mt-5">
+  <form action="" [formGroup]="loginForm" (ngSubmit)="login()" >
+      <p *ngIf="dataError" class="alert alert-danger">{{dataError}}</p>
+     
+      <div class="group">
+          <label for="">Email</label>
+          <input class="form-control mb-2" type="email" formControlName="email"
+          [ngClass]="{
+              'is-valid': !email?.errors && email?.dirty,
+              'is-invalid': email?.errors && email?.dirty
+            }">
+            <div class="alert alert-danger invalid-feedback">
+              <p *ngIf="email?.getError('required')">Email is required</p>
+              <p *ngIf="email?.getError('pattern')">Email invalid</p>
+            </div>
+      </div>
+      <div class="group">
+          <label for="">Password</label>
+          <input class="form-control mb-2 " type="password" formControlName="password"
+          [ngClass]="{
+              'is-valid': !passwrd?.errors && passwrd?.dirty,
+              'is-invalid': passwrd?.errors && passwrd?.dirty
+            }" >
+            <div class="alert alert-danger invalid-feedback">
+              <p *ngIf="passwrd?.getError('required')">Password is required</p>
+              <p *ngIf="passwrd?.getError('minlength')">Minimum six Numbers</p>
+            </div>
+      </div>
+      
+      <button [disabled]="loginForm.invalid" class="btn btn-outline-success d-block ms-auto ">Login</button>
+      
+
+  </form>
+</div>
+
+</div>

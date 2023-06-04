@@ -1,0 +1,20 @@
+<section class="pt-5">
+    
+    
+<div class="container mt-5">
+    <div class="row g-5">
+  
+        <div class="col-md-3" *ngFor="let actor of trendingActors">
+            <div class="rounded-4 border shadow border-2 overflow-hidden position-relative main" [routerLink]="['/movie-details',actor.media_type,actor.id]">
+                <div class="layer ">
+                     
+                    <h2 class="h4 position-absolute bottom-0 m-2">{{actor.name}}</h2>
+                </div>
+                <img [src]="'https://image.tmdb.org/t/p/w500'+ actor.profile_path" alt="" class="w-100">
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+</section>

@@ -1,0 +1,20 @@
+.navbar-toggler-icon{
+    background-color: white;
+    
+}
+nav{
+        background-color:rgba(0, 0, 0, 0.5);
+}
+.logo{
+    font-size: 30px;
+    font-style: italic;
+    color: #E50914;
+}
+.dropdown-menu li{
+    cursor: pointer;
+    margin-top: 5px;
+
+}
+.dropdown{
+    cursor: pointer;
+}

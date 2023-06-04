@@ -1,0 +1,15 @@
+<div class="row g-5">
+    <h2 class="text-danger pt-2 fs-1 text-center">Action movies</h2>
+    <div class="col-md-3" *ngFor="let movie of actionMovies">
+        <div class="rounded-4 border shadow border-2 overflow-hidden position-relative main"
+        
+        [routerLink]="['/movie-details','movie',movie.id]">
+            <div class="layer ">
+                 <h4><i class="fa-solid fa-star" style="color: #fbf309;"></i>{{movie.vote_average.toFixed(1)}}</h4>
+                <div class="position-absolute top-50 start-50 translate-middle"><i class="fa-brands fa-youtube fa-beat fa-3x" style="color: #f40101;"></i></div>
+                <h2 class="h4 position-absolute bottom-0 m-2">{{movie.original_title}}</h2>
+            </div>
+            <img [src]="'https://image.tmdb.org/t/p/w500'+ movie.poster_path" alt="" class="w-100">
+        </div>
+    </div>
+    </div>

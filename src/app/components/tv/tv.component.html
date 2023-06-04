@@ -1,0 +1,21 @@
+<section class="pt-5">
+    <div class=" pt-5 container" >
+    
+  
+        <div class="row g-5" >
+            <div class=" col-md-3" *ngFor="let tv of trendingTV" >
+            <div class="rounded-4 border shadow border-2 overflow-hidden position-relative main"  [routerLink]="['/movie-details',tv.media_type,tv.id]">
+               
+                <div class="layer ">
+                     <h4><i class="fa-solid fa-star" style="color: #fbf309;"></i>{{tv.vote_average.toFixed(1)}}</h4>
+                    <div class="position-absolute top-50 start-50 translate-middle"><i class="fa-brands fa-youtube fa-beat fa-3x" style="color: #f40101;"></i></div>
+                    <h2 class="h4 position-absolute bottom-0 m-2">{{tv.name}}</h2>
+                </div>
+                <img [src]="'https://image.tmdb.org/t/p/w500'+ tv.poster_path" alt="" class="w-100">
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+
